@@ -7,8 +7,8 @@
         {
           "type": "python",
           "style": "diamond",
-          "foreground": "#808080",
-          "template": " {{ if .Venv }} ({{ .Venv }} {{.Full}}) {{ end }} "
+          "foreground": "#11cf00",
+          "template": "{{ if .Venv }}({{ .Venv }})\u000a{{ end }}"
         },
         {
           "type": "text",
@@ -70,7 +70,7 @@
             "fetch_upstream_icon": true
           },
           "style": "powerline",
-          "template": " \u279c ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
+          "template": "\u2BAC({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \u2BAE {{ .StashCount }}{{ end }})",
           "type": "git"
         },
         {
@@ -80,17 +80,6 @@
           "style": "powerline",
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
-        },
-        {
-          "background": "#33658A",
-          "foreground": "#ffffff",
-          "properties": {
-            "time_format": "15:04"
-          },
-          "style": "diamond",
-          "template": " \u2665 {{ .CurrentDate | date .Format }} ",
-          "trailing_diamond": "\ue0b0",
-          "type": "time"
         }
       ],
       "type": "prompt"
